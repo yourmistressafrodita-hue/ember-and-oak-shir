@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EMBER &amp; OAK — Where Fire Meets Flavor</title>
+<meta name="description" content="Upscale Mediterranean restaurant & bar in Prague. Wood-fire cooking, seasonal ingredients, intimate atmosphere. Reserve your table today.">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+<!-- Styles -->
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="style.css">
+
+<!-- Favicon (inline SVG ember) -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2C14 8 8 12 8 19a8 8 0 0016 0c0-7-6-11-8-17z' fill='%23D4A574'/%3E%3Cpath d='M16 12c-1 3-4 5-4 9a4 4 0 008 0c0-4-3-6-4-9z' fill='%230C0A09'/%3E%3C/svg%3E">
+</head>
+<body>
+
+<!-- ============================================================
+     NAVIGATION
+     ============================================================ -->
+<nav class="nav" id="nav">
+  <div class="nav__inner container">
+    <a href="#home" class="nav__logo" aria-label="EMBER & OAK Home">
+      <svg viewBox="0 0 32 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M16 0C14 7 7 12 7 20a9 9 0 0018 0C25 12 18 7 16 0Z" fill="var(--color-primary)" opacity="0.9"/>
+        <path d="M16 10c-1.5 4-5 7-5 12a5 5 0 0010 0c0-5-3.5-8-5-12Z" fill="var(--color-bg)"/>
+        <path d="M16 18c-0.8 2-2.5 3.5-2.5 6a2.5 2.5 0 005 0c0-2.5-1.7-4-2.5-6Z" fill="var(--color-primary)" opacity="0.6"/>
+      </svg>
+      <span class="nav__logo-text">Ember &amp; Oak</span>
+    </a>
+
+    <div class="nav__links">
+      <a href="#home" class="nav__link nav__link--active" data-nav="home">Home</a>
+      <a href="#menu" class="nav__link" data-nav="menu">Menu</a>
+      <a href="#about" class="nav__link" data-nav="about">Our Story</a>
+      <a href="#reservations" class="nav__link" data-nav="reservations">Reservations</a>
+      <a href="#reservations" class="nav__reserve-btn">Reserve</a>
+    </div>
+
+    <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="nav__mobile-menu" id="mobileMenu">
+  <a href="#home" class="nav__mobile-link" data-nav="home">Home</a>
+  <a href="#menu" class="nav__mobile-link" data-nav="menu">Menu</a>
+  <a href="#about" class="nav__mobile-link" data-nav="about">Our Story</a>
+  <a href="#reservations" class="nav__mobile-link" data-nav="reservations">Reservations</a>
+</div>
+
+<!-- ============================================================
+     PAGE: HOME
+     ============================================================ -->
+<main>
+<section class="page page--active" id="page-home">
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero__bg">
+      <img src="./assets/hero-interior.png" alt="EMBER & OAK restaurant interior with warm ambient lighting" loading="eager">
+    </div>
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <h1 class="hero__title">Ember &amp; Oak</h1>
+      <p class="hero__tagline">Where Fire Meets Flavor</p>
+      <a href="#reservations" class="btn btn--primary">Reserve a Table</a>
+    </div>
+  </div>
+
+  <!-- Intro -->
+  <div class="intro fade-in">
+    <div class="intro__divider"></div>
+    <p class="intro__text">
+      We believe in the alchemy of open flame and honest ingredients. Every dish tells the story of Mediterranean tradition, reimagined over ember and oak.
+    </p>
+  </div>
+
+  <!-- Featured Dishes -->
+  <div class="featured fade-in">
+    <div class="featured__header">
+      <p class="featured__label">From the Kitchen</p>
+      <h2 class="featured__title">Signature Dishes</h2>
+    </div>
+    <div class="featured__grid">
+      <div class="featured__card">
+        <img src="./assets/food-hero.png" alt="Beautifully plated fine dining dish" class="featured__card-img" loading="lazy">
+        <div class="featured__card-content">
+          <h3 class="featured__card-name">Whole Grilled Branzino</h3>
+          <p class="featured__card-desc">Herb butter, roasted vegetables, citrus</p>
+        </div>
+      </div>
+      <div class="featured__card">
+        <img src="./assets/food-spread.png" alt="Spread of Mediterranean dishes" class="featured__card-img" loading="lazy" style="object-position: center 30%;">
+        <div class="featured__card-content">
+          <h3 class="featured__card-name">Wood-Fired Octopus</h3>
+          <p class="featured__card-desc">Charred lemon, capers, fingerling potatoes</p>
+        </div>
+      </div>
+      <div class="featured__card">
+        <img src="./assets/chef.png" alt="Chef preparing dish at the wood-fire grill" class="featured__card-img" loading="lazy">
+        <div class="featured__card-content">
+          <h3 class="featured__card-name">28-Day Aged Ribeye</h3>
+          <p class="featured__card-desc">Bone marrow butter, hand-cut frites</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Atmosphere -->
+  <div class="atmosphere fade-in" style="padding: 0 var(--gutter);">
+    <img src="./assets/bar.png" alt="Cocktail bar with bartender at EMBER & OAK" class="atmosphere__image" loading="lazy">
+    <div class="atmosphere__content">
+      <p class="atmosphere__label">The Bar</p>
+      <h2 class="atmosphere__title">Crafted Cocktails &amp; Rare Spirits</h2>
+      <p class="atmosphere__text">
+        Our bar is an experience in itself. From barrel-aged negronis to bespoke creations by our mixologist, every drink is crafted with the same care we bring to every plate. Settle into the amber glow and let the evening unfold.
+      </p>
+      <a href="#menu" class="btn btn--outline">View Cocktails</a>
+    </div>
+  </div>
+
+  <!-- CTA Banner -->
+  <div class="cta-banner fade-in">
+    <h2 class="cta-banner__title">Join Us Tonight</h2>
+    <p class="cta-banner__subtitle">An evening you won't forget — reserve your table now</p>
+    <a href="#reservations" class="btn btn--primary">Make a Reservation</a>
+  </div>
+
+  <!-- Info Bar -->
+  <div class="info-bar fade-in">
+    <div class="info-bar__inner">
+      <div>
+        <p class="info-bar__label">Location</p>
+        <p class="info-bar__text">47 Old Town Square<br>Prague 1, Czech Republic</p>
+      </div>
+      <div>
+        <p class="info-bar__label">Hours</p>
+        <p class="info-bar__text">Mon–Thu 17:00–23:00<br>Fri–Sat 17:00–00:00<br>Sun 12:00–22:00</p>
+      </div>
+      <div>
+        <p class="info-bar__label">Contact</p>
+        <p class="info-bar__text">+420 234 567 890<br>hello@emberandoak.cz</p>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ============================================================
+     PAGE: MENU
+     ============================================================ -->
+<section class="page" id="page-menu">
+
+  <!-- Hero -->
+  <div class="hero hero--short">
+    <div class="hero__bg">
+      <img src="./assets/food-spread.png" alt="Overhead spread of Mediterranean dishes" loading="lazy">
+    </div>
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <h1 class="hero__subtitle">The Menu</h1>
+    </div>
+  </div>
+
+  <!-- Menu Section -->
+  <div class="menu-section">
+    <div class="menu-tabs">
+      <button class="menu-tab menu-tab--active" data-tab="starters">Starters</button>
+      <button class="menu-tab" data-tab="mains">Mains</button>
+      <button class="menu-tab" data-tab="desserts">Desserts</button>
+      <button class="menu-tab" data-tab="cocktails">Cocktails &amp; Wine</button>
+    </div>
+
+    <!-- Starters -->
+    <div class="menu-category menu-category--active" id="cat-starters">
+      <div class="menu-item">
+        <div class="menu-item__info">
+          <h3 class="menu-item__name">Burrata &amp; Heirloom Tomato</h3>
+          <p class="menu-item__desc">Aged balsamic, basil oil, pine nuts</p>
+        </div>
+        <span class="menu-item__price">€14</span>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item__info">
+          <h3 class="menu-item__name">Wood-Fired Octopus</h3>
+          <p class="menu-item__desc">Charred lemon, capers, fingerling potatoes</p>
+        </div>
+        <span class="menu-item__price">€18</span>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item__info">
+          <h3 class="menu-item__name">Beef Tartare</h3>
+          <p class="menu-item__desc">Quail egg, truffle aioli, crispy shallots</p>
+        </div>
+        <span class="menu-item__price">€16</span>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item__info">
+          <h3 class="menu-item__name">Seasonal Soup</h3>
+          <p class="menu-item__desc">Chef's daily creation, sourdough crostini</p>
+        </div>
+        <span class="menu-item__price">€12</span>
+      </div>
+    </div>
+
+    <!-- Mains -->
+    <div class="menu-category" id="cat-mains">
+      <div class="menu-item">
+        <div class="menu-item__info">
+          <h3 class="menu-item__name">Whole Grilled Branzino</h3>
+          <p class="menu-item__desc">Herb butter, roasted vegetables, citrus</p>
+        </div>
+        <span class="menu-item__price">€34</span>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item__info">
+          <h3 class="menu-item__name">28-Day Aged Ribeye</h3>
+          <p class="menu-item__desc">Bone marrow butter, hand-cut frites</p>
+        </div>
+        <span class="menu-item__price">€45</span>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item__info">
+          <h3 class="menu-item__name">Handmade Pappardelle</h3>
+          <p class="menu-item__desc">Wild mushroom ragù, pecorino, truffle oil</p>
+        </div>
+        <span class="menu-item__price">€28</span>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item__info">
+          <h3 class="menu-item__name">Duck Breast</h3>
+          <p class="menu-item__desc">Cherry gastrique, roasted parsnips, kale</p>
+        </div>
+        <span class="menu-item__price">€36</span>
+      </div>
+    </div>
+
+    <!-- Desserts -->
+    <div class="menu-category" id="cat-desserts">
+      <div class="menu-item">
+        <div class="menu-item__info">
+          <h3 class="menu-item__name">Tiramisu</h3>
+          <p class="menu-item__desc">House-made ladyfingers, espresso, mascarpone</p>
+        </div>
+        <span class="menu-item__price">€14</span>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item__info">
+          <h3 class="menu-item__name">Chocolate Fondant</h3>
+          <p class="menu-item__desc">Salted caramel, vanilla gelato</p>
+        </div>
+        <span class="menu-item__price">€16</span>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item__info">
+          <h3 class="menu-item__name">Panna Cotta</h3>
+          <p class="menu-item__desc">Seasonal fruit compote, almond biscotti</p>
+        </div>
+        <span class="menu-item__price">€12</span>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item__info">
+          <h3 class="menu-item__name">Cheese Selection</h3>
+          <p class="menu-item__desc">Artisan cheeses, honeycomb, fig preserve</p>
+        </div>
+        <span class="menu-item__price">€15</span>
+      </div>
+    </div>
+
+    <!-- Cocktails & Wine -->
+    <div class="menu-category" id="cat-cocktails">
+      <div class="menu-item">
+        <div class="menu-item__info">
+          <h3 class="menu-item__name">Ember Old Fashioned</h3>
+          <p class="menu-item__desc">Smoked bourbon, maple, angostura</p>
+        </div>
+        <span class="menu-item__price">€16</span>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item__info">
+          <h3 class="menu-item__name">Mediterranean Mule</h3>
+          <p class="menu-item__desc">Limoncello, ginger, fresh basil</p>
+        </div>
+        <span class="menu-item__price">€14</span>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item__info">
+          <h3 class="menu-item__name">Oak Negroni</h3>
+          <p class="menu-item__desc">Barrel-aged gin, Campari, sweet vermouth</p>
+        </div>
+        <span class="menu-item__price">€18</span>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item__info">
+          <h3 class="menu-item__name">Lavender Martini</h3>
+          <p class="menu-item__desc">Vodka, elderflower, lavender syrup</p>
+        </div>
+        <span class="menu-item__price">€15</span>
+      </div>
+    </div>
+
+    <p class="menu-note">Menu changes seasonally. Please inform staff of any dietary requirements.</p>
+  </div>
+
+</section>
+
+<!-- ============================================================
+     PAGE: ABOUT / STORY
+     ============================================================ -->
+<section class="page" id="page-about">
+
+  <!-- Hero -->
+  <div class="hero hero--short">
+    <div class="hero__bg">
+      <img src="./assets/chef.png" alt="Chef cooking at the wood-fire grill" loading="lazy">
+    </div>
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <h1 class="hero__subtitle">Our Story</h1>
+    </div>
+  </div>
+
+  <!-- Story -->
+  <div class="story-section fade-in">
+    <p class="story-section__label">Since 2019</p>
+    <h2 class="story-section__title">A Mediterranean Heart in the Heart of Prague</h2>
+    <p class="story-section__text">
+      Ember &amp; Oak was born from a simple belief: that fire transforms food into something extraordinary. Founded in 2019 by Chef Marco Bellini, our restaurant brings the warmth of Mediterranean tradition to the cobblestoned streets of Prague's Old Town.
+    </p>
+    <p class="story-section__text">
+      Every evening, our wood-fired ovens and grills come alive, filling the space with the primal aromas of charring herbs, caramelizing sugars, and slow-roasting meats. This is cooking as it was meant to be — elemental, honest, alive.
+    </p>
+  </div>
+
+  <!-- Chef -->
+  <div class="chef-section fade-in">
+    <img src="./assets/chef.png" alt="Chef Marco Bellini at the wood-fire grill" class="chef-section__image" loading="lazy">
+    <div>
+      <p class="chef-section__label">The Chef</p>
+      <h2 class="chef-section__name">Marco Bellini</h2>
+      <p class="chef-section__bio">
+        Born in Naples and trained across the kitchens of Barcelona, Lyon, and Copenhagen, Chef Marco Bellini brings over two decades of culinary mastery to every plate. His philosophy is rooted in respect — for fire, for the seasons, and for the artisans who grow and raise our ingredients.
+      </p>
+      <p class="chef-section__bio" style="margin-top: var(--space-md);">
+        At Ember &amp; Oak, Marco has created a menu that honors Mediterranean heritage while embracing the extraordinary produce of the Czech countryside. The result is food that feels both timeless and entirely new.
+      </p>
+    </div>
+  </div>
+
+  <!-- Values -->
+  <div class="values fade-in">
+    <div class="values__header">
+      <p class="values__label">Our Philosophy</p>
+      <h2 class="values__title">What We Believe</h2>
+    </div>
+    <div class="values__grid">
+      <div class="values__card">
+        <div class="values__card-icon">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="20" cy="20" r="16" stroke="var(--color-primary)" stroke-width="1.5" opacity="0.5"/>
+            <path d="M20 8c-2 5-7 8-7 14a7 7 0 0014 0c0-6-5-9-7-14z" stroke="var(--color-primary)" stroke-width="1.5" fill="none"/>
+          </svg>
+        </div>
+        <h3 class="values__card-title">Seasonal</h3>
+        <p class="values__card-text">Our menu evolves with the seasons, celebrating each ingredient at its peak. We work with local farmers to bring you the freshest produce each week.</p>
+      </div>
+      <div class="values__card">
+        <div class="values__card-icon">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="20" cy="20" r="16" stroke="var(--color-primary)" stroke-width="1.5" opacity="0.5"/>
+            <path d="M14 26c0-5 6-10 6-16 0 6 6 11 6 16a6 6 0 01-12 0z" stroke="var(--color-primary)" stroke-width="1.5" fill="none"/>
+          </svg>
+        </div>
+        <h3 class="values__card-title">Local</h3>
+        <p class="values__card-text">We source from farms within 100 kilometers of Prague. Every partnership is personal, every ingredient traceable to the hands that grew it.</p>
+      </div>
+      <div class="values__card">
+        <div class="values__card-icon">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="20" cy="20" r="16" stroke="var(--color-primary)" stroke-width="1.5" opacity="0.5"/>
+            <path d="M15 14h10M13 20h14M15 26h10" stroke="var(--color-primary)" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3 class="values__card-title">Crafted</h3>
+        <p class="values__card-text">From hand-rolled pasta to house-cured charcuterie, everything is made with patience and precision. There are no shortcuts in our kitchen.</p>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ============================================================
+     PAGE: RESERVATIONS
+     ============================================================ -->
+<section class="page" id="page-reservations">
+
+  <!-- Hero -->
+  <div class="hero hero--short">
+    <div class="hero__bg">
+      <img src="./assets/hero-interior.png" alt="EMBER & OAK dining room" loading="lazy">
+    </div>
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <h1 class="hero__subtitle">Reservations</h1>
+    </div>
+  </div>
+
+  <!-- Reservation Form -->
+  <div class="reservation-section fade-in">
+    <h2 class="reservation-section__title">Reserve Your Table</h2>
+    <p class="reservation-section__subtitle">We look forward to welcoming you</p>
+
+    <form id="reservationForm">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="res-date">Date</label>
+          <input type="date" id="res-date" class="form-input" required>
+        </div>
+        <div class="form-group">
+          <label for="res-time">Time</label>
+          <select id="res-time" class="form-select" required>
+            <option value="" disabled selected>Select time</option>
+            <option value="17:00">17:00</option>
+            <option value="17:30">17:30</option>
+            <option value="18:00">18:00</option>
+            <option value="18:30">18:30</option>
+            <option value="19:00">19:00</option>
+            <option value="19:30">19:30</option>
+            <option value="20:00">20:00</option>
+            <option value="20:30">20:30</option>
+            <option value="21:00">21:00</option>
+            <option value="21:30">21:30</option>
+            <option value="22:00">22:00</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="res-guests">Number of Guests</label>
+        <select id="res-guests" class="form-select" required>
+          <option value="" disabled selected>Select guests</option>
+          <option value="1">1 Guest</option>
+          <option value="2">2 Guests</option>
+          <option value="3">3 Guests</option>
+          <option value="4">4 Guests</option>
+          <option value="5">5 Guests</option>
+          <option value="6">6 Guests</option>
+          <option value="7">7 Guests</option>
+          <option value="8">8 Guests</option>
+          <option value="9">9 Guests</option>
+          <option value="10">10 Guests</option>
+          <option value="11">11 Guests</option>
+          <option value="12">12 Guests</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="res-name">Name</label>
+          <input type="text" id="res-name" class="form-input" placeholder="Your full name" required>
+        </div>
+        <div class="form-group">
+          <label for="res-email">Email</label>
+          <input type="email" id="res-email" class="form-input" placeholder="your@email.com" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="res-phone">Phone</label>
+        <input type="tel" id="res-phone" class="form-input" placeholder="+420 ..." required>
+      </div>
+
+      <div class="form-group">
+        <label for="res-requests">Special Requests</label>
+        <textarea id="res-requests" class="form-textarea" placeholder="Allergies, celebrations, seating preferences..."></textarea>
+      </div>
+
+      <p class="form-note">For parties larger than 8, please call us directly.</p>
+
+      <button type="submit" class="form-submit">Confirm Reservation</button>
+    </form>
+
+    <div class="form-contact">
+      <div class="form-contact__item">
+        <p class="form-contact__label">Phone</p>
+        <p class="form-contact__value"><a href="tel:+420234567890">+420 234 567 890</a></p>
+      </div>
+      <div class="form-contact__item">
+        <p class="form-contact__label">Email</p>
+        <p class="form-contact__value"><a href="mailto:hello@emberandoak.cz">hello@emberandoak.cz</a></p>
+      </div>
+    </div>
+
+    <!-- Confirmation -->
+    <div class="reservation-confirmation" id="reservationConfirmation">
+      <div class="reservation-confirmation__icon">
+        <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="28" cy="28" r="26" stroke="var(--color-primary)" stroke-width="1.5"/>
+          <path d="M18 28l7 7 13-14" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <h3 class="reservation-confirmation__title">Reservation Confirmed</h3>
+      <p class="reservation-confirmation__text">
+        Thank you for choosing Ember &amp; Oak. We've received your reservation and will send a confirmation to your email shortly. We look forward to welcoming you.
+      </p>
+    </div>
+  </div>
+
+</section>
+</main>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="footer" id="footer">
+  <div class="footer__inner">
+    <div class="footer__brand">
+      <div class="footer__logo">
+        <svg viewBox="0 0 32 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M16 0C14 7 7 12 7 20a9 9 0 0018 0C25 12 18 7 16 0Z" fill="var(--color-primary)" opacity="0.9"/>
+          <path d="M16 10c-1.5 4-5 7-5 12a5 5 0 0010 0c0-5-3.5-8-5-12Z" fill="var(--color-bg)"/>
+          <path d="M16 18c-0.8 2-2.5 3.5-2.5 6a2.5 2.5 0 005 0c0-2.5-1.7-4-2.5-6Z" fill="var(--color-primary)" opacity="0.6"/>
+        </svg>
+        <span class="footer__logo-text">Ember &amp; Oak</span>
+      </div>
+      <p class="footer__brand-text">Upscale Mediterranean restaurant &amp; bar in the heart of Prague's Old Town. Wood-fire cooking, seasonal ingredients, unforgettable evenings.</p>
+    </div>
+
+    <div>
+      <h4 class="footer__col-title">Navigate</h4>
+      <a href="#home" class="footer__col-link">Home</a>
+      <a href="#menu" class="footer__col-link">Menu</a>
+      <a href="#about" class="footer__col-link">Our Story</a>
+      <a href="#reservations" class="footer__col-link">Reservations</a>
+    </div>
+
+    <div>
+      <h4 class="footer__col-title">Hours</h4>
+      <p class="footer__col-text">Mon–Thu 17:00–23:00<br>Fri–Sat 17:00–00:00<br>Sun 12:00–22:00</p>
+    </div>
+
+    <div>
+      <h4 class="footer__col-title">Contact</h4>
+      <p class="footer__col-text">47 Old Town Square<br>Prague 1, Czech Republic<br><br>+420 234 567 890<br>hello@emberandoak.cz</p>
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    <span class="footer__credits">Designed by Shir Alhanati</span>
+    <span class="footer__credits"></span>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
